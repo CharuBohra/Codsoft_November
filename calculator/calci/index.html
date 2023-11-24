@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CALCULATOR</h1>
+    <div class="calculator">
+      <input type="text" name="screen" id="display" class="calculator-input">
+      <form name="sci-calc">
+        <table>
+          <tr>
+            <td><input type="button" class="btn" name="btn" value="<--" onclick="deleteChar(this.form.display)"></td>
+            <td><input type="button" class="btn" name="btn" value="C" onclick="clearDisplay()"></td>
+            <td><input type="button" class="btn" name="btn" value="&#960;" onclick="addChar('3.14159265359')"></td>
+            <!-- Replace the existing line with this updated line -->
+            <td><input type="button" class="btn" name="btn" value="=" onclick="compute()"></td>
+            <td><input type="button" class="btn" name="btn" value="%" onclick="percent()"></td>
+          </tr>
+          <tr>
+            <td><input type="button" class="btn" name="btn" value="7" onclick="addChar('7')"></td>
+            <td><input type="button" class="btn" name="btn" value="8" onclick="addChar('8')"></td>
+            <td><input type="button" class="btn" name="btn" value="9" onclick="addChar('9')"></td>
+            <td><input type="button" class="btn" name="btn" value="x&#94;" onclick="exp()"></td>
+            <td><input type="button" class="btn" name="btn" value="/" onclick="addChar('/')"></td>
+          </tr>
+          <tr>
+            <td><input type="button" class="btn" name="btn" value="4" onclick="addChar('4')"></td>
+            <td><input type="button" class="btn" name="btn" value="5" onclick="addChar('5')"></td>
+            <td><input type="button" class="btn" name="btn" value="6" onclick="addChar('6')"></td>
+            <td><input type="button" class="btn" name="btn" value="ln" onclick="ln()"></td>
+            <td><input type="button" class="btn" name="btn" value="*" onclick="addChar('*')"></td>
+          </tr>
+          <tr>
+            <td><input type="button" class="btn" name="btn" value="1" onclick="addChar('1')"></td>
+            <td><input type="button" class="btn" name="btn" value="2" onclick="addChar('2')"></td>
+            <td><input type="button" class="btn" name="btn" value="3" onclick="addChar('3')"></td>
+            <td><input type="button" class="btn" name="btn" value="&radic;" onclick="sqrt()"></td>
+            <td><input type="button" class="btn" name="btn" value="-" onclick="addChar('-')"></td>
+          </tr>
+          <tr>
+            <td><input type="button" class="btn" name="btn" value="&#177" onclick="changeSign()"></td>
+            <td><input type="button" class="btn" name="btn" value="0" onclick="addChar('0')"></td>
+            <td><input type="button" class="btn" name="btn" value="&#46;" onclick="addChar('.')"></td>
+            <td><input type="button" class="btn" name="btn" value="x&#50;" onclick="square()"></td>
+            <td><input type="button" class="btn" name="btn" value="+" onclick="addChar('+')"></td>
+          </tr>
+          <tr>
+            <td><input type="button" class="btn" name="btn" value="(" onclick="addChar('(')"></td>
+            <td><input type="button" class="btn" name="btn" value=")" onclick="addChar(')')"></td>
+            <td><input type="button" class="btn" name="btn" value="cos" onclick="cos()"></td>
+            <td><input type="button" class="btn" name="btn" value="sin" onclick="sin()"></td>
+            <td><input type="button" class="btn" name="btn" value="tan" onclick="tan()"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
